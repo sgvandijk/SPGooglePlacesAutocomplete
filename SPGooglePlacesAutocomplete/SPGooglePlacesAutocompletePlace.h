@@ -42,6 +42,11 @@
 @property (nonatomic, strong) NSString *key;
 
 /*!
+ Contains the separate terms that make up the returned result's name
+ */
+@property (nonatomic, strong, readonly) NSArray *terms;
+
+/*!
  Resolves the place to a CLPlacemark, issuing  Google Place Details request if needed.
  */
 - (void)resolveToPlacemark:(SPGooglePlacesPlacemarkResultBlock)block;
