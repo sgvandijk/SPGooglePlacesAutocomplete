@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString *reference;
 @property (nonatomic, strong) NSString *identifier;
 @property (nonatomic) SPGooglePlacesAutocompletePlaceType type;
+@property (nonatomic, strong) NSArray* terms;
 @end
 
 @implementation SPGooglePlacesAutocompletePlace
@@ -25,6 +26,10 @@
     place.reference = placeDictionary[@"reference"];
     place.identifier = placeDictionary[@"id"];
     place.type = SPPlaceTypeFromDictionary(placeDictionary);
+    NSMutableArray* terms = [NSMutableArray array];
+    for (NSDictionary* term in [placeDictionary objectForKey:@"terms"])
+        [terms addObject:term[@"value"]];
+    place.terms = terms;
     place.key = apiKey;
     return place;
 }
