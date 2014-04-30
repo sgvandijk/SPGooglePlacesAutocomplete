@@ -42,7 +42,7 @@
 @property (nonatomic, strong) NSString *key;
 
 /*!
- Contains the separate termns that make up the returned result's name
+ Contains the separate terms that make up the returned result's name
  */
 @property (nonatomic, strong, readonly) NSArray *terms;
 
