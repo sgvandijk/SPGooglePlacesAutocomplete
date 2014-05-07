@@ -86,5 +86,20 @@
     }
 }
 
+- (void)resolveToLocation:(SPGooglePlacesLocationResultBlock)block {
+    SPGooglePlacesPlaceDetailQuery *query = [[SPGooglePlacesPlaceDetailQuery alloc] initWithApiKey:self.key];
+    query.reference = self.reference;
+    [query fetchPlaceDetail:^(NSDictionary *placeDictionary, NSError *error) {
+        if (error) {
+            block(nil, error);
+        } else {
+            NSNumber *latitude = [placeDictionary valueForKeyPath:@"geometry.location.lat"];
+            NSNumber *longitude = [placeDictionary valueForKeyPath:@"geometry.location.lng"];
+            CLLocation *location = [[CLLocation alloc] initWithLatitude:[latitude doubleValue]
+                                                              longitude:[longitude doubleValue]];
+            block(location, nil);
+        }
+    }];
+}
 
 @end

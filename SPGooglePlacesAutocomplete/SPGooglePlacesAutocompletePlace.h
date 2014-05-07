@@ -51,4 +51,9 @@
  */
 - (void)resolveToPlacemark:(SPGooglePlacesPlacemarkResultBlock)block;
 
+/*!
+ Resolves the place to a CLLocation
+ */
+- (void)resolveToLocation:(SPGooglePlacesLocationResultBlock)block;
+
 @end
