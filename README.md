@@ -39,6 +39,7 @@ query.radius = 100.0;   // search addresses close to user
 query.language = @"en"; // optional
 query.types = SPPlaceTypeGeocode; // Only return geocoding (address) results.
 ```
+Remember to provide GoogleAPIKey for browser apps, not iOS ones. 
 
 Then, call -fetchPlaces to ping Google's API and fetch results. The resulting array will return objects of the SPGooglePlacesAutocompletePlace class.
 

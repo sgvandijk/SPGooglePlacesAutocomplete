@@ -74,5 +74,10 @@
  */
 @property (nonatomic) SPGooglePlacesAutocompletePlaceType types;
 
+/*!
+ The country code (ISO 3166-1 Alpha-2) to restrict the results to a certain country. Details https://developers.google.com/places/documentation/autocomplete
+ */
+@property (nonatomic, strong) NSString *countryCode;
+
 @end
 

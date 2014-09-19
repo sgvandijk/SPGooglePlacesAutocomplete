@@ -10,7 +10,7 @@
 
 @implementation NSArray(SPFoundationAdditions)
 - (id)onlyObject {
-    return [self count] == 1 ? self[0] : nil;
+    return [self count] >= 1 ? self[0] : nil;
 }
 @end
 
