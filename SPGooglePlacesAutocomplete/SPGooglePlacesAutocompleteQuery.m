@@ -84,7 +84,7 @@
     [self cancelOutstandingRequests];
     self.resultBlock = block;
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[self googleURLString]]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[self googleURLString]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
     googleConnection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     responseData = [[NSMutableData alloc] init];
 }
