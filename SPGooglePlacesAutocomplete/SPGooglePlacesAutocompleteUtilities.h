@@ -3,7 +3,9 @@
 //  SPGooglePlacesAutocomplete
 //
 //  Created by Stephen Poletto on 7/18/12.
+//  Modified by Shahar Hadas on 3/26/2014
 //  Copyright (c) 2012 Stephen Poletto. All rights reserved.
+//  Copyright (c) 2014 Sparq. All rights reserved.
 //
 
 #define kGoogleAPINSErrorCode 42
@@ -11,11 +13,15 @@
 @class CLPlacemark;
 @class CLLocation;
 
-typedef enum {
-    SPPlaceTypeInvalid = -1,
-    SPPlaceTypeGeocode = 0,
-    SPPlaceTypeEstablishment
-} SPGooglePlacesAutocompletePlaceType;
+typedef NS_ENUM(NSInteger, SPGooglePlacesAutocompletePlaceType) {
+    SPPlaceTypeAll,
+    SPPlaceTypeGeocode,
+    SPPlaceTypeEstablishment,
+    SPPlaceTypeRegions,
+    SPPlaceTypeCities
+};
+
+
 
 typedef void (^SPGooglePlacesPlacemarkResultBlock)(CLPlacemark *placemark, NSString *addressString, NSError *error);
 typedef void (^SPGooglePlacesAutocompleteResultBlock)(NSArray *places, NSError *error);

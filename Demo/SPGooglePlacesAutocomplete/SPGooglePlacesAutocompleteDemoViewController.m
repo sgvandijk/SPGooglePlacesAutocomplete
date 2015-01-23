@@ -96,18 +96,6 @@
     [self.mapView addAnnotation:selectedPlaceAnnotation];
 }
 
-- (void)dismissSearchControllerWhileStayingActive {
-    // Animate out the table view.
-    NSTimeInterval animationDuration = 0.3;
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:animationDuration];
-    self.searchDisplayController.searchResultsTableView.alpha = 0.0;
-    [UIView commitAnimations];
-    
-    [self.searchDisplayController.searchBar setShowsCancelButton:NO animated:YES];
-    [self.searchDisplayController.searchBar resignFirstResponder];
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     SPGooglePlacesAutocompletePlace *place = [self placeAtIndexPath:indexPath];
     [place resolveToPlacemark:^(CLPlacemark *placemark, NSString *addressString, NSError *error) {
@@ -121,7 +109,8 @@
         } else if (placemark) {
             [self addPlacemarkAnnotationToMap:placemark addressString:addressString];
             [self recenterMapToPlacemark:placemark];
-            [self dismissSearchControllerWhileStayingActive];
+            // ref: https://github.com/chenyuan/SPGooglePlacesAutocomplete/issues/10
+            [self.searchDisplayController setActive:NO];
             [self.searchDisplayController.searchResultsTableView deselectRowAtIndexPath:indexPath animated:NO];
         }
     }];

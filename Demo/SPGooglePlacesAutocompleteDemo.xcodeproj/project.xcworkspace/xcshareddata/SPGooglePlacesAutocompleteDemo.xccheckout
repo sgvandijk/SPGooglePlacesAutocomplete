@@ -10,29 +10,29 @@
 	<string>SPGooglePlacesAutocompleteDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F4773FE3-C06D-4B16-94C8-AA7343F14EA6</key>
+		<key>3BAC43AA9CAA0E6DDD799DA562082A4246A801B0</key>
 		<string>https://github.com/chrischentickbox/SPGooglePlacesAutocomplete.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Demo/SPGooglePlacesAutocompleteDemo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F4773FE3-C06D-4B16-94C8-AA7343F14EA6</key>
+		<key>3BAC43AA9CAA0E6DDD799DA562082A4246A801B0</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/chrischentickbox/SPGooglePlacesAutocomplete.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F4773FE3-C06D-4B16-94C8-AA7343F14EA6</string>
+	<string>3BAC43AA9CAA0E6DDD799DA562082A4246A801B0</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F4773FE3-C06D-4B16-94C8-AA7343F14EA6</string>
+			<string>3BAC43AA9CAA0E6DDD799DA562082A4246A801B0</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SPGooglePlacesAutocomplete</string>
 		</dict>
